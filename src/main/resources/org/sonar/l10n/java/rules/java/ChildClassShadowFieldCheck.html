@@ -1,0 +1,30 @@
+<p>避免在子父类的成员变量之间、或者不同代码块的局部变量之间采用完全相同的命名，使可读性降低.</p>
+<h2>不合规范代码示例</h2>
+<pre>
+public class Fruit {
+  protected Season ripe;
+  protected Color flesh;
+
+  // ...
+}
+
+public class Raspberry extends Fruit {
+  private boolean ripe;  // Noncompliant
+  private static Color FLESH; // Noncompliant
+}
+</pre>
+<h2>合规解决方案</h2>
+<pre>
+public class Fruit {
+  protected Season ripe;
+  protected Color flesh;
+
+  // ...
+}
+
+public class Raspberry extends Fruit {
+  private boolean ripened;
+  private static Color FLESH_COLOR;
+
+}
+</pre>

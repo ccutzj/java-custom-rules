@@ -1,0 +1,13 @@
+{
+  "title": "避免在子父类的成员变量之间、或者不同代码块的局部变量之间采用完全相同的命名，使可读性降低",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "confusing"
+  ],
+  "defaultSeverity": "Blocker"
+}
